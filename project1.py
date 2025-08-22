@@ -64,4 +64,35 @@
 #     print(cart)
 
 
-attendees = {""}
+# d1_attendees = {"alice", "bob", "charlie"}
+# d2_attendees = {"bob", "david", "edward"}
+
+# both=d1_attendees.intersection(d2_attendees)
+# print(both)
+
+# print(d1_attendees)
+# print(d2_attendees)
+# unique=d1_attendees.union(d2_attendees)
+# print(unique)
+
+python={"ajay","akshay","arjun"}
+datascience={"alice","bob","arjun","charlie"}
+ML={"bob","david","edward","arjun"}
+
+all=python.intersection(datascience,ML)
+print("Student with all certificate:",all)
+
+print("Student with Python certificate:",python)
+
+py_ds=python.symmetric_difference(datascience)
+print("Student with either Python or Data Science certificate:",py_ds)
+
+any=python.union(datascience,ML)
+print("Student with any certificate:",any)
+
+python.add("frank")
+print("new Python students:",python)
+
+
+for s in [python, datascience, ML]:
+    s.discard("bob")
