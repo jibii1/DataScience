@@ -35,9 +35,25 @@ import pandas as pd
 # s=pd.Series(["james","bob","alex","alice"])
 # print(s)
 
-students={"name":["alex","bob","james","alice","babu","shashi"],
+students={"name":["alex","bob","james",None,"babu","shashi"],
           "age":[20,30,40,50,60,70],
-          "course":["bca","cs","math","economics","english","malayalam"]}
+          "course":["bca","cs","math","economics","english",np.nan]}
 table=pd.DataFrame(students)
-print(table.head())
-print(table.head(3))
+# print(table.head())
+# print(table.head(3))
+# print(table.tail())
+# print(table.tail(3))
+
+# print(table.info())
+# print(table.describe())
+# print(table.columns)
+# print(table.shape)
+# table=pd.DataFrame(students,index=["a","b","c","d","e","f"])
+# print(table)
+# print(table.loc['b'])
+# print(table.loc['b','name'])
+# print(table.loc[:,["name","city"]])
+# print(table.iloc[0])
+# print(table.iloc[1,0])
+# print(table.iloc[:, 0:2])
+print(table.dropna())
