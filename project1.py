@@ -75,24 +75,40 @@
 # unique=d1_attendees.union(d2_attendees)
 # print(unique)
 
-python={"ajay","akshay","arjun"}
-datascience={"alice","bob","arjun","charlie"}
-ML={"bob","david","edward","arjun"}
+# python={"ajay","akshay","arjun"}
+# datascience={"alice","bob","arjun","charlie"}
+# ML={"bob","david","edward","arjun"}
 
-all=python.intersection(datascience,ML)
-print("Student with all certificate:",all)
+# all=python.intersection(datascience,ML)
+# print("Student with all certificate:",all)
 
-print("Student with Python certificate:",python)
+# print("Student with Python certificate:",python)
 
-py_ds=python.symmetric_difference(datascience)
-print("Student with either Python or Data Science certificate:",py_ds)
+# py_ds=python.symmetric_difference(datascience)
+# print("Student with either Python or Data Science certificate:",py_ds)
 
-any=python.union(datascience,ML)
-print("Student with any certificate:",any)
+# any=python.union(datascience,ML)
+# print("Student with any certificate:",any)
 
-python.add("frank")
-print("new Python students:",python)
+# python.add("frank")
+# print("new Python students:",python)
 
 
-for s in [python, datascience, ML]:
-    s.discard("bob")
+# for s in [python, datascience, ML]:
+#     s.discard("bob")
+
+
+book1=(11111,"The Great Gatsby", "F. Scott Fitzgerald", 1925)
+book2=(22222,"To Kill a Mockingbird", "Harper Lee", 1960)
+book3=(33333,"1984", "George Orwell", 1949)
+
+library=[book1,book2,book3]
+
+serch_id=int(input("enter the id:"))
+for book in library:
+    if book[0]==serch_id :
+        found=True
+        print(book)
+    else :
+        found=False 
+    
