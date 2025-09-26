@@ -14,11 +14,10 @@ print(X)
 
 wcss=[]
 
-#Kmeans algorithm
+
 for i in range(1,11):
     kmeans = KMeans(n_clusters=i, init='k-means++', random_state=42)
-    kmeans.fit(X)
-
+    kmeans.fit(X)
     wcss.append(kmeans.inertia_)
 
   
